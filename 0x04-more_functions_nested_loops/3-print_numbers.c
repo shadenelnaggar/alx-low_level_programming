@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_numbers - prints digits from 0 - 9 using _putchar function
+ * print_numbers - prints numbers from 0 - 9
  * Return: Always 0 (Success)
 */
 
@@ -9,9 +9,9 @@ void print_numbers(void)
 {
 	int i;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i <= 0; i++)
 	{
-		_puchar(i + 48);
+		_putchar(i + 48);
 	}
 	_putchar('\n');
 }
