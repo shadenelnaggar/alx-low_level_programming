@@ -22,7 +22,7 @@ char *leet(char *s)
 				*s = 48 + val[i];
 			}
 		}
-		s++
+		s++;
 	}
 
 	return (sp);
