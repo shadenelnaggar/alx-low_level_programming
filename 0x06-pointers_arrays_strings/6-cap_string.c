@@ -41,9 +41,9 @@ char *cap_string(char *s)
 
 	while (*s)
 	{
-		if (id(*s))
+		if (isDelimeter(*s))
 			fd = 1;
-		else if (il(*s) && fd)
+		else if (isLower(*s) && fd)
 		{
 			*s -= 32;
 			fd = 0;
