@@ -10,21 +10,27 @@
 
 int main(int argc, char *argv[])
 {
-	int tot = 0;
+	int i, n, tot = 0;
 	char *ch;
 
-	while (--argc)
+	if (argc < 2)
 	{
-		for (ch = argv[argc]; *ch; ch++)
-		{
-			if (*ch < '0' || *ch > '9')
-			{
-				return (printf("Error\n"), 1);
-			}
-		}
-		sum += atoi(argv[argc]);
+		printf("0\n");
+		return (0);
 	}
-
+	for (i = 1; argv[i]; i++)
+	{
+		n = strtol(argv[i], &flag, 10);
+		if (*ch)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
+		{
+			tot += n;
+		}
+	}
 	printf("%d\n", tot);
 
 	return (0);
