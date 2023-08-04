@@ -3,35 +3,27 @@
 
 /**
  * main - a program that adds positive numbers.
- * @argc: an integer
- * @argv: a list of commands
- * Return: 0 on success, 1 on error
+ * @argc: number of cl arg
+ * @argv: list of arguments
+ * Return: 0
 */
 
 int main(int argc, char *argv[])
 {
-	int i, n, tot = 0;
+	int s = 0;
 	char *ch;
 
-	if (argc < 2)
+	while (--argc)
 	{
-		printf("0\n");
-		return (0);
-	}
-	for (i = 1; argv[i]; i++)
-	{
-		n = strtol(argv[i], &flag, 10);
-		if (*ch)
+		for (ch = argv[argc]; *ch; ch++)
 		{
-			printf("Error\n");
-			return (1);
-		}
-		else
-		{
-			tot += n;
+			if (*ch < '0' || *ch > '9')
+			{
+				return (printf("Error\n"), 1);
+			}
+			s += atoi(argv[argc]);
 		}
 	}
-	printf("%d\n", tot);
-
+	printf("%d\n", s);
 	return (0);
 }
