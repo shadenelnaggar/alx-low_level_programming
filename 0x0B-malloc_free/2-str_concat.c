@@ -25,7 +25,7 @@ int strlen(char *str)
 
 char *str_concat(char *s1, char *s2)
 {
-	int sz1, sz2, itr;
+	int sz1, sz2, i;
 	char *n;
 
 	if (s1 == NULL)
@@ -45,17 +45,17 @@ char *str_concat(char *s1, char *s2)
 		return (0);
 	}
 
-	for (itr = 0; itr <= sz1 + sz2; itr++)
+	for (i = 0; i <= sz1 + sz2; i++)
 	{
-		if (itr < sz1)
+		if (i < sz1)
 		{
-			n[itr] = s1[itr];
+			n[i] = s1[i];
 		}
 		else
 		{
-			n[itr] = s2[itr - sz1];
+			n[i] = s2[i - sz1];
 		}
 	}
-	n[itr] = '\0';
+	n[i] = '\0';
 	return (n);
 }
