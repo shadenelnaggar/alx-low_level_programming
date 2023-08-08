@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * strlen - determining the length of a string
+ * strlen - determines the length of the string
  * @str: string input
- * Return: length of string (int)
+ * Return: the length of the string
 */
 
 int strlen(char *str)
@@ -12,7 +12,6 @@ int strlen(char *str)
 
 	for (; str[s] != '\0'; s++)
 	;
-
 	return (s);
 }
 
@@ -20,7 +19,7 @@ int strlen(char *str)
  * *str_concat - a function that concatenates two strings.
  * @s1: first string input
  * @s2: second string input
- * Return: pointer to s1, s2 and null
+ * Return: pointer to string
 */
 
 char *str_concat(char *s1, char *s2)
@@ -36,7 +35,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "\0";
 	}
-
 	sz1 = strlen(s1);
 	sz2 = strlen(s2);
 	n = malloc((sz1 + sz2) * sizeof(char) + 1);
@@ -44,8 +42,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (0);
 	}
-
-	for (i = 0; i <= sz1 + sz2; i++)
+	for (i = 0; i <= (sz1 + sz2); i++)
 	{
 		if (i < sz1)
 		{
