@@ -14,13 +14,13 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j;
+	unsigned int l1, l2;
+	char *result;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	unsigned int l1, l2;
 
 	l1 = 0;
 	l2 = 0;
@@ -31,7 +31,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s2[l2] != '\0')
 		l2++;
 
-	char *result;
 	result = malloc(l1 + n + 1);
 
 	if (result == NULL)
